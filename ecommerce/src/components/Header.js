@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 class Header extends Component {
     render() {
         return (
-            <div>
+            <div className='header'>
                 <Navigation />
             </div>
         );

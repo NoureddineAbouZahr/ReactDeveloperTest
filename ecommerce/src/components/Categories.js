@@ -3,7 +3,7 @@ import Header from './Header';
 class Categories extends Component {
     render() {
         return (
-            <div>
+            <div className='CategoriesPage'>
                 <Header />
             </div>
         );
