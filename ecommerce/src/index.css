@@ -16,23 +16,74 @@ body {
   height: 100vh;
   
 }
+.MenPage{
+  width: 100vw;
+  height: 100vh;
+}
 .header{
   width: 100%;
   padding: 30px;
   padding-left: 50px;
   padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   
 }
 .navigation{
   display: flex;
 }
 .navigation a{
-  margin-right: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
   text-decoration: none;
   color: black;
   padding-bottom: 30px;
+  width: fit-content;
 }
 .navigation a:hover{
-  color: #5ece7b; 
+
+}
+.navigation a.open{
   border-bottom:solid 2px #5ece7b;
+  color: #5ece7b;
+}
+.svg1{
+  position: absolute ;
+  margin-left: 17px;
+  z-index: -10;
+  transform: scaleX(150%);
+  margin-top: -2PX;
+  border-radius: 30%;
+  
+}
+.svg2{
+  position: absolute;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  overflow: hidden;
+  
+  
+  
+
+
+}
+
+.logo{
+  transform: scale(60%);
+  object-fit: cover;
+  position: absolute;
+  right: 50%;
+}
+.body{
+  position: absolute;
+  transform: scale(180%);
+  margin-top: 32px;
+  margin-left: 25px;
+}
+.head{
+  position: absolute;
+  transform: scale(180%);
+  margin-top: 25px;
+  margin-left: 41.4px;
 }
