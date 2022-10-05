@@ -4,6 +4,7 @@ import svg1 from './assets/svg1.png';
 import svg2 from './assets/svg2.png';
 import head from './assets/head.png';
 import body from './assets/body.png';
+import Currency from './Currency';
 class Header extends Component {
     render() {
         return (
@@ -15,6 +16,10 @@ class Header extends Component {
                     <img src={head} alt="head" className='head' />
                     <img src={body} alt="body" className='body' />
 
+
+                </div>
+                <div>
+                    <Currency />
 
                 </div>
             </div>
