@@ -11,16 +11,19 @@ body {
   background-color: white;
   margin: 0;
 }
-.CategoriesPage{
+
+.CategoriesPage {
   width: 100vw;
   height: 100vh;
-  
+
 }
-.MenPage{
+
+.MenPage {
   width: 100vw;
   height: 100vh;
 }
-.header{
+
+.header {
   width: 100%;
   padding: 30px;
   padding-left: 50px;
@@ -28,12 +31,15 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
+
 }
-.navigation{
+
+.navigation {
   display: flex;
+  width: fit-content;
 }
-.navigation a{
+
+.navigation :first-child {
   margin-right: 10px;
   margin-left: 10px;
   text-decoration: none;
@@ -41,109 +47,105 @@ body {
   padding-bottom: 30px;
   width: fit-content;
 }
-.navigation a:hover{
 
+.navigation :nth-child(2) {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 30px;
+  width: fit-content;
 }
-.navigation a.open{
-  border-bottom:solid 2px #5ece7b;
+
+.navigation :nth-child(3) {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 30px;
+  width: fit-content;
+}
+
+.navigation a.open {
+  border-bottom: solid 2px #5ece7b;
   color: #5ece7b;
 }
-.svg1{
-  position: absolute ;
+
+.svg1 {
+  position: absolute;
   margin-left: 17px;
   z-index: -10;
   transform: scaleX(150%);
   margin-top: -2PX;
   border-radius: 30%;
-  
+
 }
-.svg2{
+
+.svg2 {
   position: absolute;
   border-top-left-radius: 30%;
   border-top-right-radius: 30%;
   overflow: hidden;
 }
 
-.logo{
+.logo {
   transform: scale(60%);
-  object-fit: cover;
   position: absolute;
+  width: fit-content;
   right: 50%;
+  left: 50%;
 }
-.body{
+
+.body {
   position: absolute;
   transform: scale(180%);
   margin-top: 32px;
   margin-left: 25px;
 }
-.head{
+
+.head {
   position: absolute;
   transform: scale(180%);
   margin-top: 25px;
   margin-left: 41.4px;
 }
-.currency{
-  font-weight: bold;
-  font-size: 16px;
-  margin-right: 20px;
-  display: none;
-  position: absolute;
 
-  
-  width: 50px;
+.currency {
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  width: max-content;
   z-index: 20;
-  border: 1px solid rgb(30, 30, 30);
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.163);
+  margin-left: -18px;
 }
-.currency option{
+
+.currency option {
   font-weight: bold;
   font-size: 16px;
 }
-.currency ol{
+
+.currency ol {
   position: relative;
   width: 100%;
+  list-style: none;
   display: block;
 }
-.currency ol li{
+
+.currency ol li {
   width: 100%;
   position: relative;
+  padding: 15px;
+  padding-right: 40px;
+  cursor: default;
+  transition: 100ms background-color;
 }
-/* .arrow-icon{
-  width: 100px;
-  height: 4px;
-  background-color: black;
-  position: relative;
-  top:50px;
-  
-  
-} */
-/* .arrow-icon::before{
-  content: "";
-  display: inline-block;
-  width: 40px;
-  height: 4px;
-  background-color: black;
-  transform: rotate(-45deg);
-  position: absolute;
-  right: -8px;
-  bottom: -13px;
-
-
+.currency ol li:hover {
+  background-color: rgba(0, 0, 0, 0.036);
 }
-.arrow-icon::after{
-  content: "";
-  display: inline-block;
-  width: 40px;
-  height: 4px;
-  background-color: black;
-  transform: rotate(45deg);
-  position: absolute;
-  right: -8px;
-  bottom: 13px;
 
-
-
-} */
-.arrow-icon{
+.arrow-icon {
   border-right: 3px black solid;
   border-bottom: 3px black solid;
   height: 10px;
@@ -152,25 +154,32 @@ body {
   margin-top: 10px;
   margin-left: 2px;
   position: relative;
-  
-}
-.currencyContainer{
-  display: flex;
+
 }
 
-.dropdown{
+.currencyContainer {
+  display: flex;
+  margin-inline-end: 50px;
+}
+
+.dropdown {
   margin-left: -11px;
   /* z-index: 100; */
   display: block;
   /* appearance: none; */
 }
-.currency{
+
+.dropdown:checked~.arrow-icon {
+  transform: rotate(180deg);
+}
+
+.hidden {
   display: none;
 }
-.dropdown:checked ~ .currency
-{
-   display: block;
-}
-.dropdown:checked ~ .arrow-icon{
-  transform: rotate(180deg);
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
